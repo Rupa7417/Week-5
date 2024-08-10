@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="large-image">
+            <img id="mainImage" src="image1.jpg" alt="Large Image">
+        </div>
+        <div class="thumbnails">
+            <img class="thumb" src="thumb1.jpg" alt="Thumbnail 1" onclick="changeImage('image1.jpg')">
+            <img class="thumb" src="thumb2.jpg" alt="Thumbnail 2" onclick="changeImage('image2.jpg')">
+            <img class="thumb" src="thumb3.jpg" alt="Thumbnail 3" onclick="changeImage('image3.jpg')">
+            <!-- Add more thumbnails as needed -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

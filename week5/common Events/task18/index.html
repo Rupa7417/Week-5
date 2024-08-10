@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded Event Example</title>
+    <style>
+        /* Style for the message box */
+        #message {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">The DOM content is fully loaded!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+       
+            const messageDiv = document.getElementById('message');
+            
+       
+            messageDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

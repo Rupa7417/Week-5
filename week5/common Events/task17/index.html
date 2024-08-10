@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus and Blur Event Example with JavaScript</title>
+    <style>
+        /* Basic styling for form fields */
+        input, textarea {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Highlight class to add and remove */
+        .highlight {
+            background-color: #ffffcc; /* Light yellow background */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+    </form>
+
+    <script>
+        // Select all input and textarea elements
+        const formFields = document.querySelectorAll('input, textarea');
+
+        // Add event listeners for focus and blur events
+        formFields.forEach(field => {
+            field.addEventListener('focus', function() {
+                this.classList.add('highlight'); // Add highlight class on focus
+            });
+
+            field.addEventListener('blur', function() {
+                this.classList.remove('highlight'); // Remove highlight class on blur
+            });
+        });
+    </script>
+</body>
+</html>
